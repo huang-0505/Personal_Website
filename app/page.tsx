@@ -55,7 +55,6 @@ export default function PersonalWebsite() {
     api: "/api/chat",
   })
 
-
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
   const scrollToBottom = () => {
@@ -103,18 +102,24 @@ export default function PersonalWebsite() {
           </div>
 
           <div className="flex justify-center gap-4 mb-8">
-            <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
-              <Github className="w-4 h-4 mr-2" />
-              GitHub
-            </Button>
-            <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
-              <Linkedin className="w-4 h-4 mr-2" />
-              LinkedIn
-            </Button>
-            <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
-              <Mail className="w-4 h-4 mr-2" />
-              Contact
-            </Button>
+            <a href={personalInfo.social.github} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
+                <Github className="w-4 h-4 mr-2" />
+                GitHub
+              </Button>
+            </a>
+            <a href={personalInfo.social.linkedin} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
+                <Linkedin className="w-4 h-4 mr-2" />
+                LinkedIn
+              </Button>
+            </a>
+            <a href={`mailto:${personalInfo.email}`} target="_blank" rel="noopener noreferrer">
+              <Button variant="outline" size="sm" className="bg-white hover:bg-slate-50">
+                <Mail className="w-4 h-4 mr-2" />
+                Contact
+              </Button>
+            </a>
           </div>
         </div>
 
@@ -225,6 +230,7 @@ export default function PersonalWebsite() {
                     </div>
                   </div>
                 )}
+                <div ref={messagesEndRef} />
               </div>
 
               {/* Suggested Questions */}
