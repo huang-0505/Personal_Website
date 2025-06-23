@@ -9,14 +9,14 @@ interface MarkdownRendererProps {
 export function MarkdownRenderer({ content }: MarkdownRendererProps) {
   return (
     <ReactMarkdown
-      className="prose prose-sm max-w-none dark:prose-invert"
+      className="max-w-none"
       components={{
-        p: ({ children }) => <p className="mb-2 last:mb-0">{children}</p>,
-        strong: ({ children }) => <strong className="font-semibold text-slate-900 dark:text-white">{children}</strong>,
+        p: ({ children }) => <p className="mb-2 last:mb-0 leading-relaxed">{children}</p>,
+        strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
         em: ({ children }) => <em className="italic">{children}</em>,
         ul: ({ children }) => <ul className="list-disc list-inside mb-2 space-y-1">{children}</ul>,
         ol: ({ children }) => <ol className="list-decimal list-inside mb-2 space-y-1">{children}</ol>,
-        li: ({ children }) => <li className="text-sm">{children}</li>,
+        li: ({ children }) => <li>{children}</li>,
         code: ({ children }) => (
           <code className="bg-slate-100 dark:bg-slate-700 px-1 py-0.5 rounded text-sm font-mono">{children}</code>
         ),
