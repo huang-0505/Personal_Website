@@ -5,12 +5,11 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Separator } from "@/components/ui/separator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Send, Bot, User, Github, Linkedin, Mail, MapPin, Briefcase, Sparkles, Star, Zap } from "lucide-react"
 import { useChat } from "ai/react"
-import { MarkdownRenderer } from "@/components/markdown-render"
+import { MarkdownRenderer } from "@/components/markdown-renderer"
 
 const suggestedQuestions = [
   "Tell me about your education",
@@ -107,15 +106,19 @@ export default function PersonalWebsite() {
         <div className="text-center mb-12 animate-fade-in-up">
           <div className="relative inline-block mb-6 group">
             <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-            <Avatar className="relative w-32 h-32 mx-auto border-4 border-white dark:border-slate-700 shadow-2xl transition-transform duration-300 group-hover:scale-105">
-              <AvatarImage src="/placeholder.svg?height=128&width=128" alt={personalInfo.name} />
-              <AvatarFallback className="text-2xl font-bold bg-gradient-to-br from-blue-500 to-purple-600 text-white">
-                {personalInfo.name
-                  .split(" ")
-                  .map((n) => n[0])
-                  .join("")}
-              </AvatarFallback>
-            </Avatar>
+            <div className="relative w-32 h-32 mx-auto border-4 border-white dark:border-slate-700 shadow-2xl transition-transform duration-300 group-hover:scale-105 rounded-full overflow-hidden bg-gradient-to-br from-blue-500 to-purple-600">
+              <img
+                src="/profile.jpg"
+                alt={personalInfo.name}
+                className="w-full h-full object-cover object-center"
+                style={{
+                  imageRendering: "-webkit-optimize-contrast",
+                  backfaceVisibility: "hidden",
+                  transform: "translateZ(0)",
+                }}
+                loading="eager"
+              />
+            </div>
             <div className="absolute -bottom-2 -right-2 bg-gradient-to-r from-green-400 to-emerald-500 w-8 h-8 rounded-full border-4 border-white dark:border-slate-700 animate-pulse shadow-lg">
               <div className="w-full h-full rounded-full bg-gradient-to-r from-green-400 to-emerald-500 animate-ping"></div>
             </div>
