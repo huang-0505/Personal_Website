@@ -15,7 +15,7 @@ const suggestedQuestions = [
   "What projects have you worked on?",
   "What's your experience with AI?",
   "What are your technical skills?",
-  "Tell me about VetLLM",
+  "Tell me about your hobbies",
   "What are you currently working on?",
 ]
 
@@ -158,7 +158,7 @@ export default function PersonalWebsite() {
               <div className="text-center mb-6">
                 <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white px-4 py-2 rounded-full text-sm font-medium mb-4">
                   <Bot className="w-4 h-4" />
-                  AI Assistant
+                  AI Huang
                 </div>
                 <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Ask Anything About Me</h2>
                 <p className="text-slate-600 dark:text-slate-300">
