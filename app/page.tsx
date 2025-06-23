@@ -9,7 +9,7 @@ import { Separator } from "@/components/ui/separator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Send, Bot, User, Github, Linkedin, Mail, MapPin, Briefcase, Sparkles, Star, Zap } from "lucide-react"
 import { useChat } from "ai/react"
-import { MarkdownRenderer } from "@/components/markdown-renderer"
+import { MarkdownRenderer } from "@/components/markdown-render"
 
 const suggestedQuestions = [
   "Tell me about your education",
