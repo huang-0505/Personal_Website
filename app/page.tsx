@@ -21,18 +21,21 @@ const suggestedQuestions = [
 
 const personalInfo = {
   name: "Junhui Huang",
-  title: "Data Scientist & AI Engineer",
+  title: "Data Scientist & ML Engineer",
   location: "Providence, RI",
   experience: "AI/ML Specialist",
-  email: "junhui@huangjunhui.dev",
-  bio: "Data Scientist and AI Engineer with expertise in healthcare AI, multi-modal deep learning, and large language models. Currently pursuing Master's in Data Science at Brown University.",
+  email: "junhui_huang@brown.edu",
+  bio: "Data Scientist and ML Engineer with expertise in healthcare AI and large language models. Currently pursuing Master's in Data Science at Brown University.",
   skills: [
     "Python",
+    "A/B Testing",
+    "SQL",
+    "Databricks",
+    "PySpark",
     "PyTorch",
     "HuggingFace",
     "TensorFlow",
     "LangChain",
-    "SQL",
     "Next.js",
     "FastAPI",
     "GCP",
@@ -40,8 +43,8 @@ const personalInfo = {
     "Vercel",
   ],
   social: {
-    github: "https://github.com/junhuihuang",
-    linkedin: "https://linkedin.com/in/junhuihuang",
+    github: "https://github.com/huang-0505",
+    linkedin: "https://www.linkedin.com/in/junhui-huang-816946179/",
     website: "https://huangjunhui.dev",
   },
 }
@@ -214,24 +217,22 @@ export default function PersonalWebsite() {
               </div>
 
               {/* Suggested Questions */}
-              {messages.length === 0 && (
-                <div className="mb-6">
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">Try asking:</p>
-                  <div className="flex flex-wrap gap-2">
-                    {suggestedQuestions.map((question, index) => (
-                      <Button
-                        key={index}
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleSuggestedQuestion(question)}
-                        className="text-xs bg-white hover:bg-slate-50 dark:bg-slate-700 dark:hover:bg-slate-600"
-                      >
-                        {question}
-                      </Button>
-                    ))}
-                  </div>
+              <div className="mb-6">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mb-3">Try asking:</p>
+                <div className="flex flex-wrap gap-2">
+                  {suggestedQuestions.map((question, index) => (
+                    <Button
+                      key={index}
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleSuggestedQuestion(question)}
+                      className="text-xs bg-white hover:bg-slate-50 dark:bg-slate-700 dark:hover:bg-slate-600"
+                    >
+                      {question}
+                    </Button>
+                  ))}
                 </div>
-              )}
+              </div>
 
               {/* Chat Input */}
               <form onSubmit={handleSubmit} className="flex gap-2">
