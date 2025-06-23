@@ -13,7 +13,7 @@ Here's everything you need to know about Junhui:
   - Master's in Data Science from Brown University (2026 expected)
   - Bachelor's in Applied Mathematics from Columbia University
   - Bachelor's in Biochemistry From Drew University
-  - Quitted PhD in Computational Chemistry From Carnegie Mellon University
+  - Quitted PhD in Computational Chemistry From Carnegie Mellon University (because I want to focus more on data science)
   
 - 💼 Experience:
 

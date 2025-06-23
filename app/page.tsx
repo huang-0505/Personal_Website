@@ -10,6 +10,7 @@ import { Separator } from "@/components/ui/separator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Send, Bot, User, Github, Linkedin, Mail, MapPin, Briefcase, Sparkles, Star, Zap } from "lucide-react"
 import { useChat } from "ai/react"
+import { MarkdownRenderer } from "@/components/markdown-renderer"
 
 const suggestedQuestions = [
   "Tell me about your education",
@@ -243,10 +244,9 @@ export default function PersonalWebsite() {
                         <Bot className="w-5 h-5 text-white" />
                       </div>
                       <div className="flex-1">
-                        <p className="text-slate-700 dark:text-slate-300 leading-relaxed">
-                          Hi! I'm Junhui's AI assistant. Ask me anything about his background in data science, AI
-                          projects, education, or experience!
-                        </p>
+                        <div className="text-slate-700 dark:text-slate-300 leading-relaxed">
+                          <MarkdownRenderer content="Hi! I'm Junhui's AI assistant. Ask me anything about his background in data science, AI projects, education, or experience!" />
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -278,7 +278,9 @@ export default function PersonalWebsite() {
                           : "bg-gradient-to-r from-white to-slate-50 dark:from-slate-700 dark:to-slate-600 text-slate-700 dark:text-slate-300"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap leading-relaxed">{message.content}</p>
+                      <div className="leading-relaxed">
+                        <MarkdownRenderer content={message.content} />
+                      </div>
                     </div>
                   </div>
                 ))}
