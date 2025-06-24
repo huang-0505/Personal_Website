@@ -16,8 +16,7 @@ const suggestedQuestions = [
   "What projects have you worked on?",
   "What's your experience with AI?",
   "What are your technical skills?",
-  "Tell me about VetLLM",
-  "What are you currently working on?",
+  "Tell me about VetLLM"
 ]
 
 const personalInfo = {
@@ -382,7 +381,7 @@ export default function PersonalWebsite() {
                   <h3 className="font-bold text-slate-900 dark:text-white mb-4 text-xl">Experience</h3>
                   <div className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
                     <Briefcase className="w-5 h-5 text-green-500 dark:text-green-400" />
-                    {personalInfo.experience} in software development
+                    {personalInfo.experience} in modelling and software development
                   </div>
                 </div>
               </div>
