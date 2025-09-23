@@ -27,7 +27,7 @@ const personalInfo = {
   location: "Providence, RI",
   experience: "AI/ML Specialist",
   email: "junhui_huang@brown.edu",
-  bio: "Data Scientist and ML Engineer with expertise in healthcare AI and large language models. Currently pursuing Master's in Data Science at Brown University.",
+  bio: "Data Scientist and ML Engineer with expertise in AI and large language models. Currently pursuing Master's in Data Science at Brown University.",
   skills: [
     "Python",
     "A/B Testing",
