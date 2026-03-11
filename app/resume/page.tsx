@@ -35,7 +35,7 @@ export default function ResumePage() {
     }
     const link = document.createElement("a")
     link.href = resumeHref
-    link.download = "Junhui_Huang_Resume.pdf"
+    link.download = "Junhui_Huang_MLE_Resume.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
@@ -190,14 +190,13 @@ export default function ResumePage() {
                   </h2>
                   <div className="space-y-3 text-slate-700 dark:text-slate-300">
                     <p>
-                      • Data scientist and ML Engineer with end-to-end experience building robust solutions across
-                      Generative AI (LLMs), Computer vision and predictive modeling to improve efficiency and product
-                      innovation across data-rich industries.
+                      • AI Engineer and Data Scientist with 1+ years of experience building traditional ML models & GenAI
+                      solutions. Skilled in leading through fast pacing SDLC, from architecting scalable data pipelines
+                      to deploying and optimizing large-scale models.
                     </p>
                     <p>
-                      • Lead the full project lifecycle, from architecting scalable data curation pipelines (ETL) to
-                      fine-tuning Transformer-based models (LoRA) and optimizing for high-throughput, low-latency
-                      deployment (vLLM, TensorRT)
+                      • Experience with architecting scalable data curation pipelines (ETL), fine-tuning Transformer-based
+                      models (LoRA) and optimizing for high-throughput, low-latency deployment (vLLM, TensorRT)
                     </p>
                     <p>
                       • Excels at translating complex technical insights to diverse stakeholders, fostering
@@ -249,28 +248,20 @@ export default function ResumePage() {
                   </h2>
                   <div className="space-y-3 text-slate-700 dark:text-slate-300">
                     <p>
-                      <strong>Programming & Database:</strong> Python (Pandas, Scikit-learn), SQL, R, Spark, MongoDB,
-                      Snowflake, Hadoop, OOP
+                      <strong>Data Science and GenAI:</strong> Natural Language Processing, Hugging Face Transformers,
+                      LangChain, RAG, LoRA
                     </p>
                     <p>
-                      <strong>Data Science and GenAI:</strong> A/B testing, PyTorch, TensorFlow, Hugging Face
-                      Transformers, LangChain, RAG, LoRA
+                      <strong>Modeling & Statistics:</strong> regression, A/B testing, statistical inference,
+                      clustering, classification, data mining
+                    </p>
+                    <p>
+                      <strong>Programming:</strong> Python (Numpy, Pandas, PyTorch, Scikit-learn), C++, Java, R, SQL,
+                      Spark, Unix/Linux
                     </p>
                     <p>
                       <strong>MLOps & Production:</strong> GCP, AWS, vLLM, SGLang, TensorRT, ONNX, FastAPI, Kubernetes,
                       Docker, Git, CI/CD
-                    </p>
-                    <p>
-                      <strong>Modeling & Statistics:</strong> regression, A/B testing, statistical inference,
-                      clustering, classification, data mining, PowerBI
-                    </p>
-                    <p>
-                      <strong>Data Visualization & Communication:</strong> Tableau, Matplotlib, Seaborn, PowerBI;
-                      translate analytic into business insights
-                    </p>
-                    <p>
-                      <strong>Project Delivery:</strong> Agile methodology, stakeholder collaboration, KPI reporting,
-                      cross-functional execution
                     </p>
                   </div>
                 </section>
@@ -285,14 +276,57 @@ export default function ResumePage() {
                   </h2>
 
                   <div className="space-y-8">
-                    {/* Nala PetPages */}
+                    {/* Harvard - MLOps & LLMOps */}
+                    <div>
+                      <div className="flex justify-between items-start mb-3">
+                        <div>
+                          <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
+                            MLOps & LLMOps – Production AI systems
+                          </h3>
+                          <p className="text-slate-700 dark:text-slate-300 font-medium">Harvard University</p>
+                        </div>
+                        <div className="text-right text-slate-600 dark:text-slate-400">
+                          <p>Sept 2025 – Dec 2025</p>
+                          <p>Providence, RI</p>
+                        </div>
+                      </div>
+                      <div className="space-y-2 text-slate-700 dark:text-slate-300">
+                        <p>
+                          • Designed and deployed a distributed multi-agent AI system using FastAPI microservices, Docker
+                          and Nginx, orchestrating LLM-driven narrative, rule validation and combat reasoning for
+                          complex, real-time interactive gameplay.
+                        </p>
+                        <p>
+                          • Built scalable data pipelines for rulebook preprocessing, semantic text splitting and RAG
+                          retrieval using ChromaDB; implemented model evaluation and iterative optimization to improve
+                          intent detection and narrative quality.
+                        </p>
+                        <p>
+                          • Engineered a tree-based game-state machine integrating multi-modal user signals, enabling
+                          end-to-end ML workflows, recommendation-like decisioning and robust state tracking across
+                          narrative, combat and exploration modes.
+                        </p>
+                        <p>
+                          • Developed a full-stack AI product with Next.js, TypeScript and Tailwind, collaborating across
+                          engineering and design workflows; delivered analytics tooling for gameplay insights, model
+                          debugging and data-driven iteration.
+                        </p>
+                        <p>
+                          • Fine-tuned LLM against 38k unstructured Q&A dataset on Google Cloud Vertex AI, applying
+                          NLP, model training and agile experimentation techniques to enhance story generation, rule
+                          adherence and harmful-content detection.
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Onawa Pet */}
                     <div>
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
                             Machine Learning Engineer Intern – Veterinary LLM Development
                           </h3>
-                          <p className="text-slate-700 dark:text-slate-300 font-medium">Nala PetPages</p>
+                          <p className="text-slate-700 dark:text-slate-300 font-medium">Onawa Pet</p>
                         </div>
                         <div className="text-right text-slate-600 dark:text-slate-400">
                           <p>May 2025 – Aug 2025</p>
@@ -301,74 +335,77 @@ export default function ResumePage() {
                       </div>
                       <div className="space-y-2 text-slate-700 dark:text-slate-300">
                         <p>
-                          • Reduced manual data preparation by 30% by building a data curation pipeline with
-                          de-duplication, labeling, and domain-specific parsing and creating a high-quality, proprietary
-                          dataset in a PostgreSQL backend.
+                          • Built a scalable data curation pipeline with deduplication, automated labeling and
+                          domain-specific parsing, reduced manual preparation by 30% and generating a high-quality
+                          proprietary dataset in a PostgreSQL backend.
                         </p>
                         <p>
-                          • Fine-tuned a VetLLM on the curated dataset using Hugging Face Transformers and LoRA on H100
-                          GPUs, boosting question-answering accuracy by 18% and validating its expert-level performance
-                          via an LLM-as-a-judge framework.
+                          • Fine-tuned a VetLLM using Hugging Face Transformers and LoRA on H100 GPUs, improving QA
+                          accuracy by 18% and validating expert-level performance through an LLM-as-a-Judge evaluation
+                          framework.
                         </p>
                         <p>
-                          • Benchmarked the model on a custom VetAI Leaderboard, outperforming industry standards like
-                          Google's Gemma-7B and Meta's LLaMA-3.1-8B on veterinary board exam questions.
+                          • Developed a comprehensive multi-dimensional evaluation platform and custom VetAI Leaderboard
+                          to benchmark model accuracy, robustness and safety, consistently outperforming industry
+                          baselines (Gemma-7B & LLaMA-3.1-8B).
                         </p>
                         <p>
-                          • Optimized the LLM model for deployment, cutting inference latency by 20% using TensorRT and
-                          ONNX. Delivered a production-ready REST API using vLLM as the serving engine, containerized
-                          with Docker for internal demos.
+                          • Designed and executed large-scale training and experimentation workflows using distributed
+                          data loaders and GPU-accelerated pipelines, enabling rapid model iteration, automated
+                          hyperparameter tuning and reproducible end-to-end ML experiments across multiple environments.
                         </p>
                       </div>
                     </div>
 
-                    {/* Ecoforge */}
+                    {/* EcoForge */}
                     <div>
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-                            Data Scientist Intern – Forecasting and Optimization
+                            Data Scientist – Forecasting and Optimization
                           </h3>
-                          <p className="text-slate-700 dark:text-slate-300 font-medium">Ecoforge</p>
+                          <p className="text-slate-700 dark:text-slate-300 font-medium">EcoForge</p>
                         </div>
                         <div className="text-right text-slate-600 dark:text-slate-400">
-                          <p>Oct 2024 – Apr 2025</p>
+                          <p>Aug 2023 – Aug 2024</p>
                           <p>Somerville, MA</p>
                         </div>
                       </div>
                       <div className="space-y-2 text-slate-700 dark:text-slate-300">
                         <p>
-                          • Developed and deployed an ML-based pipeline to predict cement compressive strength based on
-                          material composition, enabling clients to optimize material costs and carbon reduction
-                          targets, leading to $2M in annual cost saving.
+                          • Developed success metrics and forecasting analysis to monitor material performance trends;
+                          built an ML pipeline to predict cement compressive strength to optimize carbon reduction and
+                          deliver $2M annual savings.
                         </p>
                         <p>
-                          • Led hands-on development and iteration of a machine learning model using XGBoost, making key
-                          decisions on feature engineering, selection, and model architecture to significantly
-                          outperform distance-based benchmarks.
+                          • Led hands-on development of scalable ML models (XGBoost) across large, complex datasets,
+                          driving feature engineering, model tuning and analytical validation to significantly outperform
+                          distance-based benchmarks.
                         </p>
                         <p>
-                          • Designed and executed A/B testing experiments to validate model-driven recommendations,
-                          ensuring statistical significance and stakeholder confidence before full-scale deployment.
+                          • Designed and executed A/B and causal impact experiments to evaluate model-recommended
+                          formulation changes, ensuring statistical significance, lift attribution accuracy and
+                          business readiness before global rollout.
                         </p>
                         <p>
-                          • Designed physics-informed neural networks and applied transfer learning to enhance model
-                          robustness against low-quality, sparse data, improving generalization and applicability across
-                          diverse production environments.
+                          • Applied physics-informed neural networks, transfer learning, and advanced regularization to
+                          improve model robustness under sparse or noisy data, enhancing generalization across
+                          production environments.
                         </p>
                         <p>
-                          • Collaborated cross-functionally with engineering, IT, and operations teams; delivered
-                          Tableau dashboards visualizing price-performance trade-offs for management decisions.
+                          • Conducted deep-dive analyses and cost–benefit evaluations, partnering with Product,
+                          Engineering, and Operations to translate quantitative insights into pricing, efficiency and
+                          sustainability decisions supported by Tableau dashboards.
                         </p>
                       </div>
                     </div>
 
-                    {/* Lifespan Health System */}
+                    {/* Lifespan Health System - from DS resume */}
                     <div>
                       <div className="flex justify-between items-start mb-3">
                         <div>
                           <h3 className="text-lg font-semibold text-slate-900 dark:text-white">
-                            Healthcare Data Scientist Intern – Medical Image Modeling
+                            Healthcare Data Scientist Intern – Medical Image Modelling
                           </h3>
                           <p className="text-slate-700 dark:text-slate-300 font-medium">Lifespan Health System</p>
                         </div>
@@ -379,23 +416,24 @@ export default function ResumePage() {
                       </div>
                       <div className="space-y-2 text-slate-700 dark:text-slate-300">
                         <p>
-                          • Built multi-modal brain tumor segmentation models using U-Net and Transformer-based
-                          TransUNet on UCSF's MRI dataset, improving tumor localization accuracy by 17% from baseline
-                          model for clinical application.
+                          • Developed scalable ETL and preprocessing pipelines across eight MRI modalities, applying
+                          adaptive tissue-mask cropping, modality-specific normalization and denoising to ensure
+                          consistent, high-quality model inputs at scale.
                         </p>
                         <p>
-                          • Developed end-to-end scalable ETL pipelines compatible with 8 MRI modalities, applying
-                          adaptive cropping using tissue masks, tailored normalization, and denoising techniques that
-                          account for varying contrast and noise profiles.
+                          • Built multi-modal brain tumor segmentation models via U-Net and Transformer-based TransUNet
+                          on UCSF's MRI dataset, improving tumor localization accuracy by 17%, enabled more reliable
+                          clinical decision support.
                         </p>
                         <p>
-                          • Established an evaluation framework based on the Dice coefficient to measure tumor
-                          segmentation performance, enabling standardized model benchmarking and iterative improvements
-                          for clinical use.
+                          • Designed an evaluation framework using Dice coefficient–based metrics to standardize
+                          performance benchmarking, guide model iteration and quantify improvements for clinical
+                          deployment requirements.
                         </p>
                         <p>
-                          • Contributed to the development of model performance dashboards for clinical validation;
-                          facilitated feedback loops with radiologists to refine model outputs.
+                          • Created performance monitoring dashboards and collaborated with radiologists to incorporate
+                          qualitative feedback, refining model outputs and deriving actionable insights to strengthen
+                          clinical validation workflows.
                         </p>
                       </div>
                     </div>
