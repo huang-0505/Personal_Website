@@ -1,4 +1,4 @@
-import { streamText } from "ai"
+import { streamText, convertToModelMessages } from "ai"
 import { createOpenAI } from "@ai-sdk/openai"
 
 const openai = createOpenAI({
@@ -19,7 +19,7 @@ Here's everything you need to know about Junhui:
   - Healthcare Data Scientist Intern at Lifespan Health System (Jan 2025 – Apr 2025): Brain tumor segmentation with U-Net and TransUNet; ETL pipelines for 8 MRI modalities
 - ⚙️ Tech Stack:
   - Data Science & GenAI: NLP, Hugging Face Transformers, LangChain, RAG, LoRA
-  - Programming: Python (Numpy, Pandas, PyTorch, Scikit-learn), C++, Java, R, SQL, Spark
+  - Programming: Python (Numpy, Pandas, PyTorch, Scikit-learn), R, SQL, Spark
   - MLOps: GCP, AWS, vLLM, SGLang, TensorRT, ONNX, FastAPI, Kubernetes, Docker, Git, CI/CD
 - 🎯 Focus:
   - Scalable data pipelines (ETL), fine-tuning Transformer models, high-throughput low-latency deployment
@@ -35,9 +35,9 @@ export async function POST(req: Request) {
   const result = await streamText({
     model: openai("gpt-4o"),
     system: personalContext,
-    messages,
-    maxTokens: 500,
+    messages: await convertToModelMessages(messages),
+    maxOutputTokens: 500,
   })
 
-  return result.toDataStreamResponse()
+  return result.toUIMessageStreamResponse()
 }

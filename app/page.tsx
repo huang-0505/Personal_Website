@@ -9,6 +9,7 @@ import { Separator } from "@/components/ui/separator"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Send, Bot, User, Github, Linkedin, Mail, Briefcase, Sparkles, Star, Zap, FileText } from "lucide-react"
 import { useChat } from "@ai-sdk/react"
+import { DefaultChatTransport } from "ai"
 import { MarkdownRenderer } from "@/components/markdown-renderer"
 import Link from "next/link"
 
@@ -73,9 +74,11 @@ const FloatingParticles = () => {
 
 export default function PersonalWebsite() {
   const [activeSection, setActiveSection] = useState("chat")
-  const { messages, input, setInput, handleSubmit, isLoading } = useChat({
-    api: "/api/chat",
+  const [input, setInput] = useState("")
+  const { messages, sendMessage, status } = useChat({
+    transport: new DefaultChatTransport({ api: "/api/chat" }),
   })
+  const isLoading = status === "streaming" || status === "submitted"
 
   const messagesEndRef = useRef<HTMLDivElement>(null)
 
@@ -289,7 +292,14 @@ export default function PersonalWebsite() {
                       }`}
                     >
                       <div className="leading-relaxed">
-                        <MarkdownRenderer content={message.content} />
+                        <MarkdownRenderer
+                          content={
+                            message.parts
+                              ?.filter((p): p is { type: "text"; text: string } => p.type === "text")
+                              .map((p) => p.text)
+                              .join("") ?? ""
+                          }
+                        />
                       </div>
                     </div>
                   </div>
@@ -338,7 +348,16 @@ export default function PersonalWebsite() {
               </div>
 
               {/* Chat Input */}
-              <form onSubmit={handleSubmit} className="flex gap-3">
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault()
+                  if (input.trim()) {
+                    sendMessage({ text: input })
+                    setInput("")
+                  }
+                }}
+                className="flex gap-3"
+              >
                 <Input
                   value={inputValue}
                   onChange={(e) => setInput(e.target.value)}
