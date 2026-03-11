@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -75,8 +75,12 @@ const FloatingParticles = () => {
 export default function PersonalWebsite() {
   const [activeSection, setActiveSection] = useState("chat")
   const [input, setInput] = useState("")
-  const { messages, sendMessage, status } = useChat({
-    transport: new DefaultChatTransport({ api: "/api/chat" }),
+  const transport = useMemo(() => new DefaultChatTransport({ api: "/api/chat" }), [])
+  const { messages, sendMessage, status, error } = useChat({
+    transport,
+    onError: (err) => {
+      console.error("Chat error:", err)
+    },
   })
   const isLoading = status === "streaming" || status === "submitted"
 
@@ -325,6 +329,13 @@ export default function PersonalWebsite() {
                     </div>
                   </div>
                 )}
+
+                {error && (
+                  <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-2xl p-4 text-red-700 dark:text-red-300 text-sm">
+                    Something went wrong: {error.message}
+                  </div>
+                )}
+
                 <div ref={messagesEndRef} />
               </div>
 
